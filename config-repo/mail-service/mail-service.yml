@@ -1,0 +1,21 @@
+
+# For mail service
+mail:
+    host: smtp.gmail.com
+    port: 587
+    username: amigo.shoppe20@gmail.com
+    password: amigo20@
+    protocol: smtp
+    properties.mail.smtp:
+        auth: true
+        starttls.enable: true
+        ssl.trust: smtp.gmail.com
+
+  # Rabbitmq setup  
+spring:       
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: amigo_vhost
+    username: amigo
+    password: amigo
