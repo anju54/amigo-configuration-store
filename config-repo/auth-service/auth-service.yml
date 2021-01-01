@@ -1,6 +1,3 @@
-server:
-  port: 8765
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/auth-server-db            # Database URL
@@ -10,12 +7,18 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true    
+    show-sql: true
 
-    # Rabbitmq setup         
+  application:
+    name: auth-service
+
+     # Rabbitmq setup
   rabbitmq:
     host: localhost
     port: 5672
     virtual-host: amigo_vhost
     username: amigo
     password: amigo
+    
+server:
+  port: 8765
